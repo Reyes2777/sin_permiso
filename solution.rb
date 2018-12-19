@@ -6,5 +6,5 @@ use Rack::Auth::Basic, "Restricted Area" do |permiso|
 end
 
 get '/' do
-    "You're welcome"
+    "Si lo Logramos!"
 end
