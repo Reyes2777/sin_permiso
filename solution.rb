@@ -1,10 +1,7 @@
 require "rubygems"
 require "sinatra"
 
-use Rack::Auth::Basic, "Restricted Area" do |permiso|
-    [permiso] == ["soy-un-token-secreto"] 
-end
-
 get '/' do
-    "Si lo Logramos!"
+  headers['permiso'] = "soy-un-token-secreto"
+  puts headers # show headers on this request
 end
